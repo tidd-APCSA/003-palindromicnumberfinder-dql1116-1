@@ -49,7 +49,7 @@ public class PalindromicNumberFinder {
     }
 
 
-    //@Override
+    @Override
     public String toString(){
         return "You'd have to drive " + searchForPalindromicNum(this.num) + " miles";
     }
