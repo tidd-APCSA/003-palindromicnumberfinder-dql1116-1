@@ -13,13 +13,14 @@ public class PalindromicNumberFinder {
 
     // this method should find the next palindromic number
     public int searchForPalindromicNum(int num){
+      int temp = num;
       if(getNum() == num){
         num += 1;
       }
       while(testPalindromicNum(num) == false){
         num += 1;
       }
-      return num;
+      return num - temp;
     }
 
     // this is a helper method for searchForPalindromicNum. It's purpose is to test if a number is actually a palindrome
@@ -51,6 +52,6 @@ public class PalindromicNumberFinder {
 
     @Override
     public String toString(){
-        return "You'd have to drive " + (searchForPalindromicNum(this.num) - this.num) + " miles";
+        return "You'd have to drive " + searchForPalindromicNum(this.num) + " miles";
     }
 }
